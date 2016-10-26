@@ -60,10 +60,17 @@ public class MetricSets {
      * Combine multiple metric sets and prefix their names.
      */
     public static MetricSet combineAndPrefix(String prefix, MetricSet... metricSets) {
-        return transformNames(combine(metricSets), k -> prefix + k);
+        return prefix(prefix, combine(metricSets));
     }
 
     public static void removeAll(MetricRegistry metricRegistry, MetricSet metrics) {
         metrics.getMetrics().keySet().forEach(metricRegistry::remove);
+    }
+
+    /**
+     * Create a view that prefixes each key in the {@param metricSet} with the given {@param prefix}.
+     */
+    public static MetricSet prefix(String prefix, MetricSet metricSet) {
+        return transformNames(metricSet, k -> prefix + k);
     }
 }
