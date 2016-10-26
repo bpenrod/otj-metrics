@@ -1,4 +1,4 @@
-package com.opentable.metrics.graphite;
+package com.opentable.metrics;
 
 import java.util.Arrays;
 import java.util.HashMap;

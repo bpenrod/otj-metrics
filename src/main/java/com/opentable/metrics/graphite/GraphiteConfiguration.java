@@ -22,6 +22,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 
+import com.opentable.metrics.MetricSets;
 import com.opentable.service.AppInfo;
 import com.opentable.service.EnvInfo;
 import com.opentable.service.ServiceInfo;
