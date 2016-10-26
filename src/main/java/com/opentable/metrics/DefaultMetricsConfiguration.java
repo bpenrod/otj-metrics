@@ -14,5 +14,6 @@ import com.opentable.metrics.health.HealthConfiguration;
         GraphiteConfiguration.class,
         MetricsJmxExporter.class,
         MetricAnnotationConfiguration.class,
+        SpringContextMetrics.class,
 })
 public class DefaultMetricsConfiguration {}
